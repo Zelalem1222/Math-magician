@@ -9,4 +9,14 @@ function Welcome(props) {
   );
 }
 
-export default Welcome;
+function App(){
+  return (
+    <div>
+    <Welcome name='Zola'/>
+    <Welcome name='Zola'/>
+    <Welcome name='Zola'/>
+    </div>
+  )
+}
+
+export default App;
