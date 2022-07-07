@@ -1,53 +1,63 @@
-import React from 'react';
+import React, { Component } from 'react';
+import calculate from '../logic/calculate';
 
-class Calculator extends React.Component {
+class Calculator extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      total: 0,
+      total: '',
+      next: null,
+      operation: null,
+
     };
   }
 
-  render() {
-    const { total } = this.state;
-    return (
+calculateFunction = (x) => {
+  this.setState((s) => calculate(s, x));
+};
 
-      <div className="container">
-        <div className="display">
-          <span>{total}</span>
-        </div>
-        <div>
-          <button type="button">AC</button>
-          <button type="button">+/-</button>
-          <button type="button">%</button>
-          <button className="orange" type="button">/</button>
-        </div>
-        <div>
-          <button type="button">7</button>
-          <button type="button">8</button>
-          <button type="button">9</button>
-          <button className="orange" type="button">x</button>
-        </div>
-        <div>
-          <button type="button">4</button>
-          <button type="button">5</button>
-          <button type="button">6</button>
-          <button className="orange" type="button">-</button>
-        </div>
-        <div>
-          <button type="button">1</button>
-          <button type="button">2</button>
-          <button type="button">3</button>
-          <button className="orange" type="button">+</button>
-        </div>
-        <div>
-          <button className="wide-button" type="button">0</button>
-          <button type="button">.</button>
-          <button className="orange" type="button">=</button>
-        </div>
+render() {
+  const { total, operation, next } = this.state;
+  return (
+
+    <div className="container">
+      <div className="display">
+        <span>{next}</span>
+        <span>{operation}</span>
+        <span>{total}</span>
       </div>
-    );
-  }
+      <div>
+        <button type="button" onClick={() => this.calculateFunction('AC')}>AC</button>
+        <button type="button" onClick={() => this.calculateFunction('+/-')}>+/-</button>
+        <button value="%" type="button" onClick={() => this.calculateFunction('%')}>%</button>
+        <button value="/" className="orange" onClick={() => this.calculateFunction('÷')} type="button"> &#247;</button>
+      </div>
+      <div>
+        <button value={7} type="button" onClick={() => this.calculateFunction('7')}>7</button>
+        <button value={8} type="button" onClick={() => this.calculateFunction('8')}>8</button>
+        <button value={9} type="button" onClick={() => this.calculateFunction('9')}>9</button>
+        <button value="*" className="orange" onClick={() => this.calculateFunction('x')} type="button">x</button>
+      </div>
+      <div>
+        <button value={4} type="button" onClick={() => this.calculateFunction('4')}>4</button>
+        <button value={5} type="button" onClick={() => this.calculateFunction('5')}>5</button>
+        <button value={6} type="button" onClick={() => this.calculateFunction('6')}>6</button>
+        <button value="-" className="orange" onClick={() => this.calculateFunction('-')} type="button">-</button>
+      </div>
+      <div>
+        <button value={1} type="button" onClick={() => this.calculateFunction('1')}>1</button>
+        <button value={2} type="button" onClick={() => this.calculateFunction('2')}>2</button>
+        <button value={3} type="button" onClick={() => this.calculateFunction('3')}>3</button>
+        <button value="+" className="orange" onClick={() => this.calculateFunction('+')} type="button">+</button>
+      </div>
+      <div>
+        <button value={0} onClick={() => this.calculateFunction('0')} className="wide-button" type="button">0</button>
+        <button value="." type="button" onClick={() => this.calculateFunction('.')}>.</button>
+        <button onClick={() => this.calculateFunction('=')} className="orange" type="button">=</button>
+      </div>
+    </div>
+  );
+}
 }
 
 export default Calculator;
