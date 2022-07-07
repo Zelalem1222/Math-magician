@@ -28,7 +28,7 @@ button {
   background-color: orange;
 }
 
-@media only screen and (min-device-width: 720px)  {
+@media only screen and (min-device-width: 720px) {
   .container {
     width: 25%;
     margin: 8% auto;
