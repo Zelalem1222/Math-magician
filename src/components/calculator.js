@@ -30,7 +30,7 @@ render() {
         <button type="button" onClick={() => this.calculateFunction('AC')}>AC</button>
         <button type="button" onClick={() => this.calculateFunction('+/-')}>+/-</button>
         <button value="%" type="button" onClick={() => this.calculateFunction('%')}>%</button>
-        <button value="/" className="orange" onClick={() => this.calculateFunction('÷')} type="button"> &#247;</button>
+        <button value="/" className="orange" onClick={() => this.calculateFunction('/')} type="button"> &#247;</button>
       </div>
       <div>
         <button value={7} type="button" onClick={() => this.calculateFunction('7')}>7</button>
