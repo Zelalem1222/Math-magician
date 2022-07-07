@@ -1,4 +1,4 @@
-/* eslint-disable */
+
 
 import React, { useState } from 'react';
 import calculate from '../logic/calculate';
@@ -67,28 +67,5 @@ return (
 }
 
 
-
-
-
-
-// class Calculator extends Component {
-//   constructor(props) {
-//     super(props);
-//     this.state = {
-//       total: '',
-//       next: null,
-//       operation: null,
-
-//     };
-//   }
-
-
-
-
-
-// render() {
-  
-// }
-// }
 
 export default Calculator;
