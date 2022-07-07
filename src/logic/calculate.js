@@ -1,5 +1,3 @@
-
-
 import operate from './operate';
 
 function isNumber(item) {
