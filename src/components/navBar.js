@@ -31,6 +31,7 @@ const Nav = style.div`
   & 
   a {
     text-decoration: none;
+    color: #000;
   }
   `;
 
