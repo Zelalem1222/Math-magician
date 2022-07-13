@@ -20,6 +20,7 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 padding: 0 10% 0 5%;
+background-color: #c7eeff;
 `;
 
 const Nav = style.div`
