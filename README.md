@@ -28,7 +28,7 @@ To get a local copy up and running follow these simple example steps.
 
 ## Live Demo 
 
-- [Live link](https://delightful-pithivier-d29187.netlify.app/quote)
+- [Live link](https://delightful-pithivier-d29187.netlify.app/)
 - [Live link](https://greve-baguette-12145.herokuapp.com/)
 
 
